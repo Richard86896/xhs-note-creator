@@ -1,0 +1,28 @@
+/* playful-geometric.css */
+
+.card-inner {
+  background-color: #fffdf5;
+  background-image: radial-gradient(circle, #e2e8f0 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.card-content h1 {
+  font-size: 72px;
+  font-weight: 800;
+  padding: 0.4em 0.65em;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: 3px solid #1e293b;
+  border-radius: 0 28px 0 28px;
+  box-shadow: 6px 6px 0 #1e293b;
+}
+
+.card-content blockquote {
+  padding: 0.8em 1.1em 0.8em 1.6em;
+  background-color: #f472b6;
+  color: #1e293b;
+  border: 3px solid #1e293b;
+  border-left: 10px solid #fbbf24;
+  border-radius: 0 28px 28px 0;
+  box-shadow: 6px 6px 0 #1e293b;
+}

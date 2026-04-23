@@ -1,0 +1,22 @@
+/* assets/themes/mytheme.css */
+
+/* 外层背景 */
+.card-container {
+  background: linear-gradient(135deg, #your-color1, #your-color2);
+}
+
+/* 封面背景（可选，不设则继承上面的） */
+.cover-container {
+  background: linear-gradient(180deg, #your-color1, #your-color2);
+}
+
+/* 内层卡片 */
+.card-inner {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+}
+
+/* 标题颜色 */
+.card-content h1 {
+  color: #your-accent-color;
+}

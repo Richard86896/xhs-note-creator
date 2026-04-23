@@ -1,0 +1,8 @@
+# 小红书笔记创作技能依赖
+
+# Markdown 处理
+markdown>=3.4.0
+PyYAML>=6.0
+
+# 浏览器自动化（渲染图片）
+playwright>=1.40.0
