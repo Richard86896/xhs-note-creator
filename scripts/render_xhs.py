@@ -69,7 +69,15 @@ AVAILABLE_THEMES = [
     'professional',
     'retro',
     'terminal',
-    'sketch'
+    'sketch',
+    'gradient-vibrant',
+    'dark-mode',
+    'minimal-white',
+    'warm-editorial',
+    'neon-cyber',
+    'pastel-soft',
+    'claude',
+    'kimi-brand'
 ]
 
 # 分页模式
@@ -158,9 +166,11 @@ def generate_cover_html(metadata: dict, theme: str, width: int, height: int) -> 
     # 动态调整标题字体大小
     title_len = len(title)
     if title_len <= 6:
-        title_size = int(width * 0.12)  # 极大
+        title_size = int(width * 0.13)  # 大（6字不换行）
     elif title_len <= 10:
         title_size = int(width * 0.10)  # 大
+    elif title_len <= 14:
+        title_size = int(width * 0.09)  # 中大
     elif title_len <= 18:
         title_size = int(width * 0.08)  # 中
     elif title_len <= 30:
@@ -170,20 +180,28 @@ def generate_cover_html(metadata: dict, theme: str, width: int, height: int) -> 
 
     # 获取主题背景色
     theme_backgrounds = {
-        'default': 'linear-gradient(180deg, #f3f3f3 0%, #f9f9f9 100%)',
+        'default': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 48%, #EC4899 100%)',
         'playful-geometric': 'linear-gradient(180deg, #8B5CF6 0%, #F472B6 100%)',
         'neo-brutalism': 'linear-gradient(180deg, #FF4757 0%, #FECA57 100%)',
         'botanical': 'linear-gradient(180deg, #4A7C59 0%, #8FBC8F 100%)',
         'professional': 'linear-gradient(180deg, #2563EB 0%, #3B82F6 100%)',
         'retro': 'linear-gradient(180deg, #D35400 0%, #F39C12 100%)',
         'terminal': 'linear-gradient(180deg, #0D1117 0%, #21262D 100%)',
-        'sketch': 'linear-gradient(180deg, #555555 0%, #999999 100%)'
+        'sketch': 'linear-gradient(180deg, #555555 0%, #999999 100%)',
+        'dark-mode': 'linear-gradient(170deg, #0a0e27 0%, #151b3d 40%, #1a1145 100%)',
+        'gradient-vibrant': 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+        'minimal-white': 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
+        'warm-editorial': 'linear-gradient(180deg, #FFF5E6 0%, #FDE8D0 100%)',
+        'neon-cyber': 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
+        'pastel-soft': 'linear-gradient(180deg, #FDEEF4 0%, #F0E6FF 100%)',
+        'claude': 'linear-gradient(180deg, #F2DDD0 0%, #EDE0D4 100%)',
+        'kimi-brand': 'linear-gradient(135deg, #0a1628 0%, #0d1f3c 30%, #132a50 60%, #0a1628 100%)'
     }
     bg = theme_backgrounds.get(theme, theme_backgrounds['default'])
 
     # 封面标题文字渐变随主题变化
     title_gradients = {
-        'default': 'linear-gradient(180deg, #111827 0%, #4B5563 100%)',
+        'default': 'linear-gradient(180deg, #5B21B6 0%, #BE185D 100%)',
         'playful-geometric': 'linear-gradient(180deg, #7C3AED 0%, #F472B6 100%)',
         'neo-brutalism': 'linear-gradient(180deg, #000000 0%, #FF4757 100%)',
         'botanical': 'linear-gradient(180deg, #1F2937 0%, #4A7C59 100%)',
@@ -191,9 +209,45 @@ def generate_cover_html(metadata: dict, theme: str, width: int, height: int) -> 
         'retro': 'linear-gradient(180deg, #8B4513 0%, #D35400 100%)',
         'terminal': 'linear-gradient(180deg, #39D353 0%, #58A6FF 100%)',
         'sketch': 'linear-gradient(180deg, #111827 0%, #6B7280 100%)',
+        'dark-mode': 'linear-gradient(135deg, #00D9FF 0%, #a78bfa 50%, #f472b6 100%)',
+        'gradient-vibrant': 'linear-gradient(135deg, #5b21b6 0%, #764ba2 50%, #667eea 100%)',
+        'minimal-white': 'linear-gradient(180deg, #111827 0%, #374151 100%)',
+        'warm-editorial': 'linear-gradient(180deg, #78350f 0%, #D35400 100%)',
+        'neon-cyber': 'linear-gradient(135deg, #00FF88 0%, #FF00FF 100%)',
+        'pastel-soft': 'linear-gradient(180deg, #831843 0%, #be185d 100%)',
+        'claude': 'linear-gradient(180deg, #8B5A2B 0%, #C67A4B 100%)',
+        'kimi-brand': 'linear-gradient(135deg, #1a1a2e 0%, #4285F4 100%)'
     }
     title_bg = title_gradients.get(theme, title_gradients['default'])
-    
+
+    # 封面内卡片样式随主题变化
+    cover_inner_styles = {
+        'default': {
+            'background': '#FFFFFF',
+            'extra': 'border: 1.5px solid rgba(255, 255, 255, 0.9); box-shadow: 0 18px 48px rgba(91, 33, 182, 0.20);',
+        },
+        'dark-mode': {
+            'background': 'rgba(255, 255, 255, 0.06)',
+            'extra': 'border: 1.5px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);',
+        },
+        'kimi-brand': {
+            'background': '#ffffff',
+            'extra': 'border: 3px solid #4285F4; box-shadow: 0 0 40px rgba(66, 133, 244, 0.2);',
+        }
+    }
+    inner_style = cover_inner_styles.get(theme, {'background': '#F3F3F3', 'extra': ''})
+
+    # 封面副标题颜色随主题变化
+    subtitle_colors = {
+        'dark-mode': 'rgba(255, 255, 255, 0.6)',
+        'terminal': 'rgba(255, 255, 255, 0.6)',
+        'neon-cyber': 'rgba(255, 255, 255, 0.6)',
+        'kimi-brand': '#4a4a6a',
+        'gradient-vibrant': '#4a5568',
+        'default': '#7E22CE',
+    }
+    subtitle_color = subtitle_colors.get(theme, '#000000')
+
     html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -230,7 +284,8 @@ def generate_cover_html(metadata: dict, theme: str, width: int, height: int) -> 
             height: {int(height * 0.91)}px;
             left: {int(width * 0.06)}px;
             top: {int(height * 0.045)}px;
-            background: #F3F3F3;
+            background: {inner_style['background']};
+            {inner_style['extra']}
             border-radius: 25px;
             display: flex;
             flex-direction: column;
@@ -254,15 +309,15 @@ def generate_cover_html(metadata: dict, theme: str, width: int, height: int) -> 
             flex: 1;
             display: flex;
             align-items: flex-start;
-            white-space: nowrap;
-            overflow: hidden;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }}
         
         .cover-subtitle {{
             font-weight: 350;
             font-size: {int(width * 0.067)}px;
             line-height: 1.4;
-            color: #000000;
+            color: {subtitle_color};
             margin-top: auto;
         }}
     </style>
@@ -292,17 +347,25 @@ def generate_card_html(content: str, theme: str, page_number: int = 1,
     
     # 获取主题背景色
     theme_backgrounds = {
-        'default': 'linear-gradient(180deg, #f3f3f3 0%, #f9f9f9 100%)',
+        'default': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 48%, #EC4899 100%)',
         'playful-geometric': 'linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%)',
         'neo-brutalism': 'linear-gradient(135deg, #FF4757 0%, #FECA57 100%)',
         'botanical': 'linear-gradient(135deg, #4A7C59 0%, #8FBC8F 100%)',
         'professional': 'linear-gradient(135deg, #2563EB 0%, #3B82F6 100%)',
         'retro': 'linear-gradient(135deg, #D35400 0%, #F39C12 100%)',
         'terminal': 'linear-gradient(135deg, #0D1117 0%, #161B22 100%)',
-        'sketch': 'linear-gradient(135deg, #555555 0%, #888888 100%)'
+        'sketch': 'linear-gradient(135deg, #555555 0%, #888888 100%)',
+        'dark-mode': 'linear-gradient(170deg, #0a0e27 0%, #151b3d 40%, #1a1145 100%)',
+        'gradient-vibrant': 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+        'minimal-white': 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
+        'warm-editorial': 'linear-gradient(180deg, #FFF5E6 0%, #FDE8D0 100%)',
+        'neon-cyber': 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
+        'pastel-soft': 'linear-gradient(180deg, #FDEEF4 0%, #F0E6FF 100%)',
+        'claude': 'linear-gradient(180deg, #F2DDD0 0%, #EDE0D4 100%)',
+        'kimi-brand': 'linear-gradient(135deg, #0a1628 0%, #0d1f3c 30%, #132a50 60%, #0a1628 100%)'
     }
     bg = theme_backgrounds.get(theme, theme_backgrounds['default'])
-    
+
     # 根据模式设置不同的容器样式
     if mode == 'auto-fit':
         container_style = f'''
@@ -403,8 +466,37 @@ def generate_card_html(content: str, theme: str, page_number: int = 1,
             transform-origin: top left;
             will-change: transform;
         }}
+
+        .card-content img {{
+            max-width: calc(100% + 120px);
+            width: calc(100% + 120px);
+            height: auto;
+            border-radius: 0;
+            margin: 20px -60px;
+            display: block;
+            box-shadow: none;
+        }}
+
+        .card-content p img {{
+            margin: 20px -60px;
+        }}
         
         {theme_css}
+
+        /* 只调整标签布局，不改各主题本身的配色和视觉风格 */
+        .tags-container {{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px 16px;
+        }}
+
+        .tags-container .tag {{
+            margin: 0 !important;
+            white-space: nowrap;
+            flex: 0 0 auto;
+        }}
         
         .page-number {{
             position: absolute;
