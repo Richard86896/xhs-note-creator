@@ -52,7 +52,7 @@ const PAGING_MODES = ['separator', 'auto-fit', 'auto-split', 'dynamic'];
 
 // 主题背景色
 const THEME_BACKGROUNDS = {
-    'default': 'linear-gradient(180deg, #f3f3f3 0%, #f9f9f9 100%)',
+    'default': 'linear-gradient(135deg, #7C3AED 0%, #A855F7 48%, #EC4899 100%)',
     'playful-geometric': 'linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%)',
     'neo-brutalism': 'linear-gradient(135deg, #FF4757 0%, #FECA57 100%)',
     'botanical': 'linear-gradient(135deg, #4A7C59 0%, #8FBC8F 100%)',
@@ -64,7 +64,7 @@ const THEME_BACKGROUNDS = {
 
 // 封面标题文字渐变（随主题变化）
 const THEME_TITLE_GRADIENTS = {
-    'default': 'linear-gradient(180deg, #111827 0%, #4B5563 100%)',
+    'default': 'linear-gradient(180deg, #5B21B6 0%, #BE185D 100%)',
     'playful-geometric': 'linear-gradient(180deg, #7C3AED 0%, #F472B6 100%)',
     'neo-brutalism': 'linear-gradient(180deg, #000000 0%, #FF4757 100%)',
     'botanical': 'linear-gradient(180deg, #1F2937 0%, #4A7C59 100%)',
@@ -257,8 +257,10 @@ function generateCoverHtml(metadata, theme, width, height) {
             height: ${Math.floor(height * 0.91)}px;
             left: ${Math.floor(width * 0.06)}px;
             top: ${Math.floor(height * 0.045)}px;
-            background: #F3F3F3;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(255, 255, 255, 0.9);
             border-radius: 25px;
+            box-shadow: 0 18px 48px rgba(91, 33, 182, 0.20);
             display: flex;
             flex-direction: column;
             padding: ${Math.floor(width * 0.074)}px ${Math.floor(width * 0.079)}px;
@@ -288,7 +290,7 @@ function generateCoverHtml(metadata, theme, width, height) {
             font-weight: 350;
             font-size: ${Math.floor(width * 0.067)}px;
             line-height: 1.4;
-            color: #000000;
+            color: #7E22CE;
             margin-top: auto;
         }
     </style>

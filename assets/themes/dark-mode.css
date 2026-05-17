@@ -1,0 +1,176 @@
+/* dark-mode.css - 现代暗黑科技风（参考小红书爆款封面） */
+
+:root {
+    --primary-color: #00D9FF;
+    --secondary-color: #6366f1;
+    --accent-color: #a78bfa;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+}
+
+/* ========================
+   封面样式
+   ======================== */
+
+.cover-container {
+    background: linear-gradient(170deg, #0a0e27 0%, #151b3d 40%, #1a1145 100%) !important;
+}
+
+.cover-inner {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.cover-title {
+    background: linear-gradient(135deg, #00D9FF 0%, #a78bfa 50%, #f472b6 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 2px 10px rgba(0, 217, 255, 0.3)) !important;
+}
+
+.cover-subtitle {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ========================
+   正文卡片样式
+   ======================== */
+
+.card-container {
+    background: linear-gradient(170deg, #0a0e27 0%, #151b3d 40%, #1a1145 100%) !important;
+    position: relative;
+}
+
+/* 几何网格装饰层 */
+.card-inner {
+    position: relative;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    z-index: 1;
+}
+
+.card-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card-content {
+    color: #e2e8f0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-content h1 {
+    font-size: 58px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 36px;
+    line-height: 1.35;
+}
+
+.card-content h2 {
+    font-size: 46px;
+    font-weight: 700;
+    color: #00D9FF;
+    margin: 32px 0 22px 0;
+    padding-bottom: 14px;
+    border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.card-content h3 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #a78bfa;
+    margin: 28px 0 16px 0;
+}
+
+.card-content p {
+    font-size: 40px;
+    line-height: 1.75;
+    color: #cbd5e1;
+    margin-bottom: 28px;
+}
+
+.card-content strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.card-content li {
+    font-size: 38px;
+    margin-bottom: 18px;
+    color: #e2e8f0;
+    line-height: 1.65;
+}
+
+.card-content ul,
+.card-content ol {
+    margin: 24px 0;
+    padding-left: 48px;
+}
+
+.card-content blockquote {
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+    border-left: 4px solid #00D9FF;
+    border-radius: 0 16px 16px 0;
+    padding: 28px 36px;
+    font-size: 38px;
+    color: #00D9FF;
+    margin: 28px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 217, 255, 0.15);
+    border-left: 4px solid #00D9FF;
+}
+
+.card-content code {
+    background: rgba(0, 217, 255, 0.12);
+    color: #00D9FF;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 34px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.card-content em {
+    color: #00D9FF;
+    font-style: normal;
+}
+
+/* 标签 */
+.tag {
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+    color: #00D9FF;
+    padding: 12px 26px;
+    border-radius: 24px;
+    font-size: 32px;
+    margin: 8px 10px 8px 0;
+    font-weight: 500;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* 页码 */
+.page-number {
+    color: rgba(255, 255, 255, 0.35);
+}

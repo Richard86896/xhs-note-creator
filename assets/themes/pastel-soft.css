@@ -1,0 +1,87 @@
+/* pastel-soft.css - 马卡龙柔和风（女性向/生活） */
+
+:root {
+    --primary-color: #FDA7DF;
+    --secondary-color: #D980FA;
+    --accent-color: #A8E6CF;
+    --text-primary: #5D4E6D;
+    --text-secondary: #8B7FA8;
+}
+
+.card-container {
+    background: linear-gradient(180deg, #FFF9FC 0%, #FFF0F5 50%, #F5F0FF 100%);
+}
+
+.card-inner {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 35px;
+    box-shadow: 0 15px 50px rgba(219, 128, 250, 0.15);
+    border: 3px solid #FAD6E8;
+}
+
+.card-content h1 {
+    font-size: 58px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #FDA7DF 0%, #D980FA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 35px;
+}
+
+.card-content h2 {
+    font-size: 46px;
+    font-weight: 600;
+    color: #D980FA;
+    margin: 30px 0 20px 0;
+}
+
+.card-content p {
+    font-size: 42px;
+    line-height: 1.8;
+    color: #8B7FA8;
+}
+
+.card-content li {
+    font-size: 40px;
+    margin-bottom: 18px;
+    color: #8B7FA8;
+}
+
+.card-content blockquote {
+    background: linear-gradient(135deg, #FDA7DF20 0%, #D980FA20 100%);
+    border-left: 5px solid #D980FA;
+    border-radius: 0 20px 20px 0;
+    padding: 30px 40px;
+    font-size: 40px;
+    color: #D980FA;
+}
+
+.card-content code {
+    background: linear-gradient(135deg, #FDA7DF 0%, #D980FA 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 34px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #FDA7DF 0%, #D980FA 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 32px;
+    margin: 8px 10px 8px 0;
+    font-weight: 500;
+}
+
+.cover-container {
+    background: linear-gradient(180deg, #FFF9FC 0%, #FFF0F5 50%, #F5F0FF 100%);
+}
+
+.cover-title {
+    background: linear-gradient(180deg, #D980FA 0%, #FDA7DF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

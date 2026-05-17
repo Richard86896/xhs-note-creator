@@ -1,0 +1,85 @@
+/* warm-editorial.css - 暖色调编辑风（生活方式） */
+
+:root {
+    --primary-color: #E17055;
+    --secondary-color: #FDCB6E;
+    --accent-color: #81ECEC;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+}
+
+.card-container {
+    background: linear-gradient(180deg, #FFF5E6 0%, #FFECD2 100%);
+}
+
+.card-inner {
+    background: #FFFDF8;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(225, 112, 85, 0.1);
+}
+
+.card-content h1 {
+    font-size: 58px;
+    font-weight: 700;
+    color: #E17055;
+    margin-bottom: 35px;
+    font-style: italic;
+}
+
+.card-content h2 {
+    font-size: 46px;
+    font-weight: 600;
+    color: #E17055;
+    margin: 30px 0 20px 0;
+}
+
+.card-content p {
+    font-size: 42px;
+    line-height: 1.8;
+    color: #636e72;
+}
+
+.card-content li {
+    font-size: 40px;
+    margin-bottom: 18px;
+    color: #636e72;
+}
+
+.card-content blockquote {
+    background: linear-gradient(135deg, #FDCB6E20 0%, #E1705520 100%);
+    border-left: 5px solid #E17055;
+    border-radius: 0 16px 16px 0;
+    padding: 30px 40px;
+    font-size: 40px;
+    color: #E17055;
+    font-style: normal;
+}
+
+.card-content code {
+    background: #FDCB6E;
+    color: #2d3436;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 34px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #E17055 0%, #FDCB6E 100%);
+    color: #2d3436;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 32px;
+    margin: 8px 10px 8px 0;
+    font-weight: 500;
+}
+
+.cover-container {
+    background: linear-gradient(180deg, #FFF5E6 0%, #FFECD2 100%);
+}
+
+.cover-title {
+    background: linear-gradient(180deg, #E17055 0%, #D63031 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

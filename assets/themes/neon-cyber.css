@@ -1,0 +1,94 @@
+/* neon-cyber.css - 霓虹赛博风（科技/游戏） */
+
+:root {
+    --primary-color: #00FF88;
+    --secondary-color: #FF00FF;
+    --accent-color: #00D4FF;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+}
+
+.card-container {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a0a2e 50%, #0a1a2e 100%);
+}
+
+.card-inner {
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a2e 100%);
+    border-radius: 4px;
+    border: 2px solid #00FF8840;
+    box-shadow: 0 0 30px #00FF8820, inset 0 0 30px #00000080;
+}
+
+.card-content h1 {
+    font-size: 60px;
+    font-weight: 900;
+    color: #00FF88;
+    margin-bottom: 35px;
+    text-shadow: 0 0 10px #00FF88, 0 0 20px #00FF8850;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF00FF;
+    margin: 30px 0 20px 0;
+    text-shadow: 0 0 10px #FF00FF50;
+}
+
+.card-content p {
+    font-size: 40px;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.card-content li {
+    font-size: 38px;
+    margin-bottom: 18px;
+    color: #e0e0e0;
+}
+
+.card-content blockquote {
+    background: linear-gradient(90deg, #00FF8815 0%, #FF00FF15 100%);
+    border-left: 4px solid #00FF88;
+    border-radius: 0 12px 12px 0;
+    padding: 25px 35px;
+    font-size: 38px;
+    color: #00FF88;
+    text-shadow: 0 0 5px #00FF8850;
+}
+
+.card-content code {
+    background: #00FF8820;
+    color: #00FF88;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 34px;
+    border: 1px solid #00FF8840;
+}
+
+.tag {
+    background: linear-gradient(135deg, #00FF88 0%, #00D4FF 100%);
+    color: #0a0a0a;
+    padding: 10px 22px;
+    border-radius: 0;
+    font-size: 30px;
+    margin: 8px 10px 8px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #00FF88;
+}
+
+.cover-container {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a0a2e 50%, #0a1a2e 100%);
+}
+
+.cover-title {
+    background: linear-gradient(180deg, #00FF88 0%, #00D4FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px #00FF8850;
+}

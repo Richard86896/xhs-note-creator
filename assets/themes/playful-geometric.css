@@ -87,6 +87,16 @@
   padding: 0;
 }
 
+.card-content img {
+  max-width: calc(100% + 120px);
+  width: calc(100% + 120px);
+  height: auto;
+  border-radius: 0;
+  margin: 20px -60px;
+  display: block;
+  box-shadow: none;
+}
+
 .tags-container {
   margin-top: 40px;
   padding-top: 25px;

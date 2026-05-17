@@ -1,0 +1,105 @@
+/* gradient-vibrant.css - 渐变活力风（年轻潮流） */
+
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --accent-color: #FFE66D;
+    --text-primary: #1a1a2e;
+    --text-secondary: #2d3436;
+}
+
+.card-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.card-inner {
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+}
+
+.card-content h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #5b21b6;
+    margin-bottom: 35px;
+}
+
+.card-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #5b21b6;
+    margin: 30px 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid rgba(102, 126, 234, 0.2);
+}
+
+.card-content p {
+    font-size: 42px;
+    line-height: 1.75;
+    color: #1e293b;
+}
+
+.card-content li {
+    font-size: 40px;
+    margin-bottom: 18px;
+    color: #1e293b;
+    line-height: 1.65;
+}
+
+.card-content strong {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.card-content blockquote {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    border-left: 6px solid #764ba2;
+    border-radius: 0 16px 16px 0;
+    padding: 28px 36px;
+    font-size: 40px;
+    color: #5b21b6;
+    margin: 28px 0;
+}
+
+.card-content code {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+    color: #5b21b6;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 34px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.card-content em {
+    color: #764ba2;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 30px;
+    margin: 12px 16px 12px 0 !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.cover-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+.cover-title {
+    background: linear-gradient(135deg, #5b21b6 0%, #764ba2 50%, #667eea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cover-subtitle {
+    color: #4a5568;
+}
